@@ -1,0 +1,23 @@
+{
+  "name": "sreeb/huobi-api",
+  "description": "封装火币网接口SDK",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "sreeb",
+      "email": "sreeb228@163.com"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*",
+    "php": ">=7.1.0",
+    "sreeb/curl": "1.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "sreeb\\": "src"
+    }
+  }
+}

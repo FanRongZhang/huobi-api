@@ -1,0 +1,20 @@
+2020-07-10 16:56:18
+请求接口：https://api.hbdm.vn/v1/account/accounts?AccessKeyId=dec22865-1qdmpe4rty-64660b80-eca6c&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2020-07-10T08%3A56%3A17&symbol=BTC&contract_type=next_week&contract_code=20&Signature=StMDe0CDJI%2B5%2Bo7YlLN%2BJz73DFCz9nB6Fhr2MiDLh9E%3D
+请求类型：GET
+请求状态：404
+请求时长：0.92999
+请求参数：array (
+  'symbol' => 'BTC',
+  'contract_type' => 'next_week',
+  'contract_code' => 20,
+)
+响应数据：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+错误信息：0:
+
