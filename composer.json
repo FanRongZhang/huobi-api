@@ -1,6 +1,6 @@
 {
   "name": "sreeb/huobi-api",
-  "description": "封装火币网接口SDK",
+  "description": "简单易用的火币网接口SDK",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
