@@ -18,25 +18,25 @@ abstract class AbstractHuobiApi
      * accessKey
      * @var string
      */
-    protected $AccessKey;
+    protected $AccessKey = '';
 
     /**
      * secretKey
      * @var string
      */
-    protected $SecretKey;
+    protected $SecretKey = '';
 
     /**
      * 验签方法
      * @var string
      */
-    protected $SignatureMethod;
+    protected $SignatureMethod = 'HmacSHA256';
 
     /**
      * 验签版本
      * @var int
      */
-    protected $SignatureVersion;
+    protected $SignatureVersion = 2;
 
     /**
      * 请求接口
@@ -78,11 +78,21 @@ abstract class AbstractHuobiApi
      */
     public function setOptions(array $config): void
     {
-        $this->AccessKey = $config['AccessKey'] ?? '';
-        $this->SecretKey = $config['SecretKey'] ?? '';
-        $this->SignatureMethod = $config['SignatureMethod'] ?? 'HmacSHA256';
-        $this->SignatureVersion = $config['SignatureVersion'] ?? 2;
-        $this->ApiHost = $config['ApiHost'] ?? 'https://api.btcgateway.pro';
+        if (!empty($config['AccessKey'])) {
+            $this->AccessKey = $config['AccessKey'];
+        }
+        if (!empty($config['SecretKey'])) {
+            $this->SecretKey = $config['SecretKey'];
+        }
+        if (!empty($config['SignatureMethod'])) {
+            $this->SignatureMethod = $config['SignatureMethod'];
+        }
+        if (!empty($config['SignatureVersion'])) {
+            $this->SignatureVersion = $config['SignatureVersion'];
+        }
+        if (!empty($config['ApiHost'])) {
+            $this->ApiHost = $config['ApiHost'];
+        }
 
         $this->curl = Curl::getInstance();
         if (isset($config['curlOptions']['timeOut']) && $config['curlOptions']['timeOut'] > 0) {
