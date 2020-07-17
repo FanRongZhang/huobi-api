@@ -109,9 +109,15 @@ abstract class AbstractHuobiApi
                 $config['curlOptions']['proxy']['password'] ?? ''
             );
         }
-        $this->returnArray = $config['returnArray'] ?? false;
-        $this->toString = $config['toString'] ?? false;
-        $this->logPath = $config['logPath'] ?? false;
+        if (!empty($config['returnArray'])) {
+            $this->returnArray = $config['returnArray'];
+        }
+        if (!empty($config['toString'])) {
+            $this->toString = $config['toString'];
+        }
+        if (!empty($config['logPath'])) {
+            $this->logPath = $config['logPath'];
+        }
     }
 
     /**
